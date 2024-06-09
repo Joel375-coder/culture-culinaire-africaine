@@ -1,0 +1,130 @@
+
+.home_container {
+  padding-top: 4rem;
+}
+
+.home_text_section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.home_banner_container {
+  position: relative;
+  display: flex;
+  padding-top: 3rem;
+}
+
+.home_bannerImage_container {
+  position: absolute;
+  top: -100px;
+  right: -170px;
+  z-index: -2;
+  max-width: 700px;
+}
+
+.home_image_section {
+  max-width: 600px;
+  flex: 1;
+}
+
+.primary_heading {
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: #4c4c4c;
+  max-width: 600px;
+}
+
+.primary_text {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  max-width: 500px;
+  color: #6a6a6a;
+  margin: 1.5rem 0rem;
+}
+
+.payStyle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.secondary_button {
+  font-size: 1rem;
+  padding: 1rem 2.5rem;
+  background-color: #fe9e0d;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.secondary_button svg {
+  margin-left: 0.75rem;
+  font-size: 1.5rem;
+}
+
+.secondary_button:hover {
+  background-color: #cfe40fbd;
+}
+
+@media (max-width: 1000px) {        
+  .home_bannerImage_container {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 800px) {
+  .home_bannerImage_container {
+    max-width: 450px;
+  }
+  .home_banner_container {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .home_image_section {
+    width: 100%;
+    max-width: 400px;
+  }
+  .primary_heading {
+    text-align: center;
+    max-width: 90%;
+  }
+  .primary_text {
+    text-align: center;
+    max-width: 80%;
+  }
+  .home_text_section {
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+  }
+  .secondary_button {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+    cursor: pointer;
+  }  
+}
+
+@media (max-width: 600px) {
+  .home_bannerImage_container {
+    display: none;
+  }
+}
+
+/* Effets sur les images */
+.grid_item img {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.grid_item img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
